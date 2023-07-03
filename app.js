@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require("cors");
 
 const app = express()
-const PORT = 3001
+const PORT = process.env.PORT ||3001
 const mongoUrl = 'mongodb+srv://muskanmakde1999:TRxe4cvST4bubBkW@cluster0.qzsg9aw.mongodb.net/?retryWrites=true&w=majority';
 const order = require('./routes/order')
 
