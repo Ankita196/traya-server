@@ -27,6 +27,8 @@ const saveReview = async (req, res) => {
     const postReview = await User.findOneAndUpdate({ user_id: user_id }, {
       star: starRating,
       review: review
+    },{
+      new :true
     });
     if (!postReview) {
       return res.status(400).json({ msg: "error while saving", status: 400 });
